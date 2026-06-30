@@ -18,7 +18,7 @@ print(f'Model loaded. Expects {len(feature_names)} features:')
 print(feature_names)
 
 # ── Threshold (single source of truth — change here, not in the extension) ──
-CONFIDENCE_THRESHOLD = 0.65
+CONFIDENCE_THRESHOLD = 0.55
 
 # ── Flask app ────────────────────────────────────────────────────────────────
 app = Flask(__name__)
@@ -92,4 +92,3 @@ def health():
 if __name__ == '__main__':
     import os
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
-          
